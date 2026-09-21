@@ -32,15 +32,15 @@ The project was built and tested in **GNS3** using Cisco networking devices and 
 
 ```mermaid
 flowchart LR
-    A[Remote / Guest Client<br/>Lubuntu] --> B[Cisco Router(s)]
-    B --> C[Site-to-Site IPsec VPN]
-    C --> D[Cisco ASAv Firewall]
+    A["Remote / Guest Client<br/>Lubuntu"] --> B["Cisco Router(s)"]
+    B --> C["Site-to-Site IPsec VPN"]
+    C --> D["Cisco ASAv Firewall"]
 
-    D -->|DMZ - Security Level 50| E[Ubuntu Server<br/>Python Chat Server + Nginx]
-    D -->|Inside - Security Level 100| F[Cisco Router / Internal Network]
-    F --> G[Ubuntu Client]
+    D -->|"DMZ - Security Level 50"| E["Ubuntu Server<br/>Python Chat Server + Nginx"]
+    D -->|"Inside - Security Level 100"| F["Cisco Router / Internal Network"]
+    F --> G["Ubuntu Client"]
 
-    D -->|Outside / Guest - Security Level 0| B
+    D -->|"Outside / Guest - Security Level 0"| B
 ```
 
 > The diagram is intentionally simplified to communicate the architecture at portfolio level rather than reproduce the original GNS3 topology one-to-one.
